@@ -46,10 +46,8 @@
   }
 }
 
-// **************
-// **SHOP-CARDS**
-
-.shop-cards {
+// SECTION-CARDS
+.section-cards {
   margin: 20rem 0 16.8rem;
 
   @include respond (tablet) {
@@ -59,67 +57,8 @@
   @include respond (phone) {
     margin: 10rem 0;
   }
-
-  &__inner {
-    display: flex;
-    // flex-wrap: wrap;
-    justify-content: space-between;
-
-    @media only screen and(max-width: 750px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
 }
 
-.shop-card {
-  width: 35rem;
-  // min-height: 20.4rem;
-  border-radius: 8px;
-  background-color: $color-light-grey;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 2.2rem;
-
-  // padding: 0 8rem;
-  @media only screen and(max-width: 1100px) {
-    width: 28rem;
-  }
-
-  @include respond(tablet) {
-    width: 22.3rem;
-  }
-
-  @media only screen and(max-width:750px) {
-    width: 100%;
-
-    &:not(:first-child) {
-      margin-top: 9rem;
-    }
-  }
-
-
-  &__img {
-    margin: 0 auto;
-    margin-top: -6rem;
-
-    @include respond (phone) {
-      margin-top: -5rem;
-    }
-  }
-
-  &__heading {
-    font-weight: bold;
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    letter-spacing: 1.3px;
-    text-transform: uppercase;
-    color: $color-black;
-    margin-bottom: 1.5rem;
-  }
-}
 
 // ********************
 // ****SPEAKER-1*******
@@ -289,64 +228,5 @@
 
   &__heading {
     margin-bottom: 3.2rem;
-  }
-}
-
-// ******************
-// COMMENT
-.comment {
-  margin: 20rem 0;
-
-  @include respond (tablet) {
-    margin: 9.6rem 0;
-  }
-}
-
-.comment-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @include respond (tablet) {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-}
-
-.comment-left {
-  max-width: 44.5rem;
-
-  @include respond (tablet) {
-    max-width: 57.3rem;
-    margin-top: 6.3rem;
-  }
-
-  @include respond (phone) {
-    margin-top: 4rem;
-  }
-}
-
-.comment-right {
-  border-radius: 8px;
-  margin-left: 2rem;
-  overflow: hidden;
-
-  @include respond (tablet) {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-.comment-heading {
-  margin-bottom: 3.2rem;
-
-  @include respond (phone) {
-    font-size: 2.8rem;
-    line-height: 3.8rem;
-    letter-spacing: 1px;
-  }
-
-  &__text {
-    color: $color-primary;
   }
 }

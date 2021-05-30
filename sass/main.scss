@@ -13,15 +13,18 @@
 @import './components/dropdown';
 
 // LAYOUT
-@import './layout/header';
-@import './layout/nav';
 @import './layout/footer';
 @import './layout/forms';
+@import './layout/header';
+@import './layout/nav';
+@import './layout/page-comment';
+@import './layout/page-hero';
 
 // PAGES
+@import './pages/earphones';
+@import './pages/headphones';
 @import './pages/home';
-@import './pages/about';
-@import './pages/contact';
+@import './pages/speakers';
 
 
 

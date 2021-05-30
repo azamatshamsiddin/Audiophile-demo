@@ -1,0 +1,113 @@
+.section-products {
+  margin: 16rem 0;
+
+  @include respond (tablet) {
+    margin: 12rem 0;
+  }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond (tablet) {
+    flex-direction: column;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16rem;
+
+    @include respond (tablet) {
+      margin-bottom: 12rem;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 24rem;
+
+    @include respond (tablet) {
+      margin-bottom: 17rem;
+    }
+  }
+
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+
+    @include respond (tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    margin: 1.6rem 0 3.2rem;
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    color: $color-black;
+    opacity: .5;
+
+    @include respond (tablet) {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.product-img {
+  max-width: 54rem;
+  width: 100%;
+  height: 56rem;
+  background-color: $color-light-grey;
+  border-radius: 8px;
+
+  @include respond (tablet) {
+    max-width: 69rem;
+    width: 100%;
+    height: 35.2rem;
+
+  }
+}
+
+.xx99-2-img {
+  background-image: url(../../images/page-headphones/xx99-2.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 4rem;
+
+  @include respond (tablet) {
+    background-size: 22rem 26rem;
+  }
+}
+
+.xx99-1-img {
+  background-image: url(../../images/page-headphones/xx99-1.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 3rem;
+
+  @include respond (tablet) {
+    background-size: 22rem 26rem;
+  }
+}
+
+.xx59-img {
+  background-image: url(../../images/page-headphones/xx59.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 4rem;
+
+  @include respond (tablet) {
+    background-size: 22rem 26rem;
+  }
+}
+
+.product-info {
+  padding: 0 1.5rem;
+  max-width: 44.5rem;
+
+  @include respond (tablet) {
+    text-align: center;
+    margin-top: 5.2rem;
+    max-width: 57.2rem;
+    padding: 0;
+  }
+}
+

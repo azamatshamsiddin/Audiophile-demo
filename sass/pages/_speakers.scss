@@ -1,0 +1,19 @@
+.zx9-img {
+  background-image: url(../../images/page-headphones/zx9.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 3rem;
+
+  @include respond (tablet) {
+    background-size: 22rem 26rem;
+  }
+}
+
+.zx7-img {
+  background-image: url(../../images/page-headphones/zx7.png);
+  background-repeat: no-repeat;
+  background-position: center bottom 3rem;
+
+  @include respond (tablet) {
+    background-size: 22rem 26rem;
+  }
+}
