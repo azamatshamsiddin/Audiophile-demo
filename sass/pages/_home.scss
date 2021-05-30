@@ -1,0 +1,352 @@
+.hero {
+  background: #121212;
+  background-image: url(../../images/hero-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center top -12rem;
+  padding: 12.8rem 0 15.8rem;
+
+  @include respond (tablet) {
+    background: #141414;
+    background-image: url(../../images/hero-bg__tablet.png);
+    background-position: center top -9rem;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+  @include respond (phone) {
+    background-image: url(../../images/hero-bg__mobile.png);
+    background-position: center top -9rem;
+    padding: 10.8rem 0 11.8rem;
+
+  }
+}
+
+.hero-heading {
+  margin: 2.4rem 0;
+  max-width: 40rem;
+
+  @include respond(tablet) {
+    margin: 2.4rem auto;
+  }
+
+  @include respond(phone) {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    letter-spacing: 1.3px;
+  }
+}
+
+.hero-text {
+  max-width: 35rem;
+  margin-bottom: 4rem;
+
+  @include respond(tablet) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// **************
+// **SHOP-CARDS**
+
+.shop-cards {
+  margin: 20rem 0 16.8rem;
+
+  @include respond (tablet) {
+    margin: 15rem 0;
+  }
+
+  @include respond (phone) {
+    margin: 10rem 0;
+  }
+
+  &__inner {
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media only screen and(max-width: 750px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.shop-card {
+  width: 35rem;
+  // min-height: 20.4rem;
+  border-radius: 8px;
+  background-color: $color-light-grey;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2.2rem;
+
+  // padding: 0 8rem;
+  @media only screen and(max-width: 1100px) {
+    width: 28rem;
+  }
+
+  @include respond(tablet) {
+    width: 22.3rem;
+  }
+
+  @media only screen and(max-width:750px) {
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 9rem;
+    }
+  }
+
+
+  &__img {
+    margin: 0 auto;
+    margin-top: -6rem;
+
+    @include respond (phone) {
+      margin-top: -5rem;
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: $color-black;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// ********************
+// ****SPEAKER-1*******
+// .speaker1 {}
+
+.speaker1-inner {
+  background-image: url(../../images/ovals.svg);
+  background-repeat: no-repeat;
+  background-size: 94.4rem;
+  background-position: left -15rem top -3rem;
+  background-color: $color-primary;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 9.6rem 9.5rem 0 11.7rem;
+
+  @include respond (tablet) {
+    background-position: center bottom 6.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5.2rem 0 6.4rem;
+  }
+
+  @include respond (phone) {
+    padding: 5.5rem 2.4rem;
+    background-size: 55.8rem;
+    background-position: center bottom 16.5rem;
+  }
+}
+
+.speaker1__info {
+  max-width: 35rem;
+  margin-top: 3.7rem;
+
+  @include respond (tablet) {
+    margin-top: 6.4rem;
+  }
+
+  @include respond (phone) {
+    margin-top: 3.2rem;
+  }
+}
+
+.speaker1__heading {
+  @include respond(phone) {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    letter-spacing: 1.3px;
+  }
+}
+
+.speaker1__text {
+  margin: 2.4rem 0 4rem;
+
+  @include respond(phone) {
+    margin: 2.4rem 0;
+  }
+}
+
+// **************************
+// SPEAKER-2
+.speaker2 {
+  margin-top: 4.8rem;
+
+  @include respond (tablet) {
+    margin-top: 3.2rem;
+  }
+
+  @include respond (phone) {
+    margin-top: 2.4rem;
+  }
+
+  &__heading {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.speaker2-inner {
+  padding: 10.1rem 9.5rem;
+  background-image: url(../../images/speaker2-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+
+  @include respond (tablet) {
+    padding: 10.1rem 6.2rem;
+    background-image: url(../../images/speaker2-img__tablet.png);
+  }
+
+  @include respond (phone) {
+    padding: 10.1rem 2.4rem;
+    background-image: url(../../images/speaker2-img__phone.png);
+  }
+}
+
+// **********************
+//  EARPHONE
+.earphone-block {
+  margin-top: 4.8rem;
+
+  @include respond(tablet) {
+    margin-top: 3.2rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 2.4rem;
+  }
+
+  &__inner {
+    display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.earphone-img {
+  background-image: url(../../images/earphone-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 54rem;
+  border-radius: 8px;
+  margin-right: 3rem;
+
+  @include respond(tablet) {
+    background-image: url(../../images/earphone-img__tablet.png);
+    width: 34rem;
+    margin-right: 1rem;
+  }
+
+  @include respond(phone) {
+    background-image: url(../../images/earphone-img__phone.png);
+    width: 32.7rem;
+    height: 20rem;
+    margin: 0;
+    width: 100%;
+
+  }
+}
+
+.earphone-text {
+  padding: 10.1rem 9.5rem;
+  width: 54rem;
+  border-radius: 8px;
+  background-color: $color-light-grey;
+
+  @include respond (tablet) {
+    padding: 10.1rem 4.1rem;
+    width: 34rem;
+    margin-left: auto;
+  }
+
+  @include respond(phone) {
+    width: 32.7rem;
+    height: 20rem;
+    width: 100%;
+    margin-top: 2.4rem;
+    padding: 4.1rem 2.4rem;
+  }
+
+  &__heading {
+    margin-bottom: 3.2rem;
+  }
+}
+
+// ******************
+// COMMENT
+.comment {
+  margin: 20rem 0;
+
+  @include respond (tablet) {
+    margin: 9.6rem 0;
+  }
+}
+
+.comment-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond (tablet) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.comment-left {
+  max-width: 44.5rem;
+
+  @include respond (tablet) {
+    max-width: 57.3rem;
+    margin-top: 6.3rem;
+  }
+
+  @include respond (phone) {
+    margin-top: 4rem;
+  }
+}
+
+.comment-right {
+  border-radius: 8px;
+  margin-left: 2rem;
+  overflow: hidden;
+
+  @include respond (tablet) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.comment-heading {
+  margin-bottom: 3.2rem;
+
+  @include respond (phone) {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    color: $color-primary;
+  }
+}

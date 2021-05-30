@@ -1,0 +1,42 @@
+@mixin baElements($w, $h) {
+  display: inline-block;
+  content: "";
+  width: $w;
+  height: $h;
+  @content;
+}
+
+// **********BREAKPOINTS********
+@mixin respond($breakpoint) {
+  @if ($breakpoint==phone) {
+
+    // 600px
+    @media only screen and(max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint==tablet) {
+
+    // 900px
+    @media only screen and(max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint==tablet-land) {
+
+    // 1200px
+    @media only screen and(max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint==big-screen) {
+
+    // 1800px
+    @media only screen and(min-width: 112.5em) {
+      @content;
+    }
+  }
+}

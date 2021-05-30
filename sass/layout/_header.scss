@@ -1,0 +1,86 @@
+.logo {
+  transition: all .3s ease;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:active {
+    opacity: .6;
+  }
+}
+
+.header {
+  background-color: #131313;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  padding: 3.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  @include respond (tablet) {
+    padding: 3.2rem 0;
+  }
+
+  @include respond (phone) {
+    justify-content: space-between;
+  }
+}
+
+.header-list {
+  margin-left: 19.7rem;
+}
+
+.header-nav {
+  @include respond (tablet) {
+    display: none;
+  }
+
+}
+
+.cart {
+  display: inline-block;
+  margin-left: auto;
+  color: $color-white;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.burger-menu {
+  display: none;
+  width: 1.6rem;
+  height: 3px;
+  background-color: $color-white;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include baElements(1.6rem, 3px);
+    position: absolute;
+    background-color: $color-white;
+  }
+
+  &::before {
+    top: 6px;
+  }
+
+  &::after {
+    top: -6px;
+  }
+
+  @include respond (tablet) {
+    display: inline-block;
+    margin-right: 4rem;
+  }
+
+  @include respond(phone) {
+    margin-right: auto;
+  }
+}

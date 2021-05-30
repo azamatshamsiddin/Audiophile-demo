@@ -1,0 +1,99 @@
+/* manrope-regular - latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('../../fonts/manrope-v4-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../../fonts/manrope-v4-latin-regular.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* manrope-500 - latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+    url('../../fonts/manrope-v4-latin-500.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../../fonts/manrope-v4-latin-500.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* manrope-700 - latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('../../fonts/manrope-v4-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../../fonts/manrope-v4-latin-700.woff') format('woff');
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+  font-size: 62.5% // 62.5% *16 = 10px
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.primary-heading {
+  font-weight: bold;
+  font-size: 5.6rem;
+  line-height: 5.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-white;
+  margin: 0;
+}
+
+.secondary-heading {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0;
+}
+
+.tertiary-heading {
+  font-weight: bold;
+  font-size: 2.8rem;
+  line-height: 3.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 0;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  margin: 0;
+
+  &--light {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.status {
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+
+  &--active {
+    color: $color-primary;
+  }
+}

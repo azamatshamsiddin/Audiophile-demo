@@ -1,0 +1,30 @@
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  &__link {
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color-white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 3.4rem;
+
+    @include respond (phone) {
+      margin-right: 0;
+      margin-bottom: 1.6rem;
+    }
+  }
+}
