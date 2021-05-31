@@ -543,6 +543,16 @@ template {
   margin-left: 5px;
 }
 
+.cards {
+  margin-top: 24rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .cards {
+    margin-top: 17rem;
+  }
+}
+
 .shop-cards__inner {
   display: flex;
   justify-content: space-between;
@@ -742,10 +752,6 @@ template {
   .footer-bottom__copy {
     margin: 4.8rem 0;
   }
-}
-
-.social {
-  display: flex;
 }
 
 .social__link {
@@ -1023,16 +1029,6 @@ template {
   }
 }
 
-.product:last-child {
-  margin-bottom: 24rem;
-}
-
-@media only screen and (max-width: 56.25em) {
-  .product:last-child {
-    margin-bottom: 17rem;
-  }
-}
-
 .product:nth-child(2) {
   flex-direction: row-reverse;
 }
@@ -1048,14 +1044,17 @@ template {
 }
 
 .product__text {
-  margin-bottom: 4rem;
   color: #000;
   opacity: .5;
 }
 
+.product__btn {
+  margin-top: 4rem;
+}
+
 @media only screen and (max-width: 56.25em) {
-  .product__text {
-    margin-bottom: 2.4rem;
+  .product__btn {
+    margin-top: 2.4rem;
   }
 }
 
@@ -1111,13 +1110,13 @@ template {
   }
 }
 
-.product-info {
+.product-text {
   padding: 0 1.5rem;
   max-width: 44.5rem;
 }
 
 @media only screen and (max-width: 56.25em) {
-  .product-info {
+  .product-text {
     text-align: center;
     margin-top: 5.2rem;
     max-width: 57.2rem;
@@ -1389,6 +1388,34 @@ template {
 
 .earphone-text__heading {
   margin-bottom: 3.2rem;
+}
+
+.btn--back {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  opacity: .5;
+  transition: all .3s ease;
+  margin-bottom: 5.6rem;
+}
+
+.btn--back:hover {
+  color: #d87d4a;
+}
+
+.product-content {
+  margin-top: 8rem;
+}
+
+.product__price {
+  display: block;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 3.2rem 0 7px;
 }
 
 .zx9-img {

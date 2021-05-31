@@ -1,5 +1,12 @@
+.cards {
+  margin-top: 24rem;
+  @include respond (tablet){
+      margin-top: 17rem;
+  }
+}
+
 .shop-cards {
-   &__inner {
+  &__inner {
     display: flex;
     justify-content: space-between;
 

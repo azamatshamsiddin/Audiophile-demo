@@ -1,0 +1,27 @@
+.btn--back {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-black;
+  opacity: .5;
+  transition: all .3s ease;
+  margin-bottom: 5.6rem;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.product-content {
+  margin-top: 8rem;
+}
+
+.product__price {
+  display: block;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: $color-black;
+  margin: 3.2rem 0 7px;
+}

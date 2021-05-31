@@ -23,13 +23,13 @@
     }
   }
 
-  &:last-child {
-    margin-bottom: 24rem;
+  // &:last-child {
+  //   margin-bottom: 24rem;
 
-    @include respond (tablet) {
-      margin-bottom: 17rem;
-    }
-  }
+  //   @include respond (tablet) {
+  //     margin-bottom: 17rem;
+  //   }
+  // }
 
   &:nth-child(2) {
     flex-direction: row-reverse;
@@ -44,12 +44,15 @@
   }
 
   &__text {
-    margin-bottom: 4rem;
     color: $color-black;
     opacity: .5;
+  }
+
+  &__btn {
+    margin-top: 4rem;
 
     @include respond (tablet) {
-      margin-bottom: 2.4rem;
+      margin-top: 2.4rem;
     }
   }
 }
@@ -99,7 +102,7 @@
   }
 }
 
-.product-info {
+.product-text {
   padding: 0 1.5rem;
   max-width: 44.5rem;
 
@@ -110,4 +113,3 @@
     padding: 0;
   }
 }
-
