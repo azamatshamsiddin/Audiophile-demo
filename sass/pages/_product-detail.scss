@@ -6,6 +6,10 @@
   transition: all .3s ease;
   margin-bottom: 5.6rem;
 
+  @include respond (tablet) {
+    margin-bottom: 2.4rem;
+  }
+
   &:hover {
     color: $color-primary;
   }
@@ -13,6 +17,88 @@
 
 .product-content {
   margin-top: 8rem;
+
+  @include respond (tablet) {
+    margin-top: 3.3rem;
+  }
+
+  @include respond (phone) {
+    margin-top: 1.6rem;
+    margin-bottom: 8.8rem;
+  }
+}
+
+.pr-detail {
+  display: flex;
+
+  @include respond (tablet) {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  @include respond (phone) {
+    flex-direction: column;
+  }
+
+  .xx99-2-img {
+    background-position: center bottom 4rem;
+
+    @include respond (tablet) {
+      background-size: 18.1rem 21.5rem;
+    }
+
+    @include respond (phone) {}
+  }
+
+  &__img {
+    max-width: 54rem;
+    width: 100%;
+    height: 56rem;
+    background-color: $color-light-grey;
+    border-radius: 8px;
+
+    @include respond (tablet) {
+      max-width: 28rem;
+      width: 100%;
+      height: 48rem;
+      margin-right: 1rem;
+    }
+
+    @include respond(phone) {
+      max-width: 32.7rem;
+      height: 32.7rem;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__text {
+    @include respond (tablet) {
+      text-align: left;
+      max-width: 34rem;
+    }
+
+    @include respond (phone) {
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+  }
+
+  &__btn {
+    @include respond(tablet) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+
+.product__text {
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .product__price {
@@ -24,4 +110,196 @@
   text-transform: uppercase;
   color: $color-black;
   margin: 3.2rem 0 7px;
+}
+
+.product-info {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond (tablet) {
+      flex-direction: column;
+    }
+  }
+}
+
+.features {
+  max-width: 63.5rem;
+
+  @include respond (tablet) {
+    max-width: 100%;
+    margin-bottom: 12rem;
+  }
+
+  @include respond (phone) {
+    margin-bottom: 8.8rem;
+  }
+
+  &__heading {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.box {
+  max-width: 35rem;
+  width: 100%;
+
+  @include respond (tablet) {
+    display: flex;
+    max-width: 55rem;
+    justify-content: space-between;
+  }
+
+  @include respond (phone) {
+    max-width: 55rem;
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin-bottom: 3.2rem;
+
+    @include respond (tablet) {
+      margin-bottom: 0;
+    }
+
+    @include respond (phone) {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.box-list {
+  &__item {
+    list-style: none;
+    color: rgba(0, 0, 0, .5);
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__num {
+    color: $color-primary;
+    font-weight: 700;
+    margin-right: 2.4rem;
+  }
+}
+
+// ***********************
+.image-wrapper {
+  margin: 16rem 0;
+}
+
+.wrapper-inner {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.wrapper-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 44.5rem;
+  border-radius: 8px;
+
+  @include respond (phone) {
+    max-width: 32.7rem;
+  }
+
+  &__img {
+    @include respond (phone) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.wrapper-right {
+  margin-left: 1rem;
+  max-width: 63.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include respond(phone) {
+    margin-left: 0;
+    max-width: 32.7rem;
+  }
+}
+
+// ****************
+.other-product__heading {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: $color-black;
+
+  @include respond(phone) {
+    font-size: 2.4rem;
+    letter-spacing: 0.9px;
+
+  }
+}
+
+.other-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6.4rem;
+
+  @include respond(tablet) {
+    margin-top: 5.6rem;
+  }
+
+  @include respond (phone) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+}
+
+.other-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 35rem;
+  width: 100%;
+
+  @include respond (tablet-land) {
+    max-width: 30rem;
+    width: 100%;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  @include respond(phone) {
+    &:not(:last-child) {
+      margin-bottom: 5.6rem;
+      margin-right: 0;
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    color: $color-black;
+    margin: 4rem 0 3.2rem;
+  }
+
+  &__img {
+    border-radius: 8px;
+    object-fit: cover;
+  }
 }

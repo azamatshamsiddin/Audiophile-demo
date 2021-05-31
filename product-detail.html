@@ -46,13 +46,13 @@
     <div class="container">
       <a class="text btn--back" href="#">Go back</a>
       <div class="products">
-        <div class="product">
-          <div class="product-img xx99-2-img"></div>
-          <div class="product-text">
+        <div class="product pr-detail">
+          <div class="pr-detail__img xx99-2-img"></div>
+          <div class="product-text pr-detail__text">
             <p class="status status--active product__status">
               New product
             </p>
-            <h2 class="secondary-heading product__heading">
+            <h2 class="secondary-heading product__heading pr-detail__heading">
               XX99 Mark II<br>
               Headphone
             </h2>
@@ -61,17 +61,23 @@
               experience by reproducing the balanced depth and precision of studio-quality sound.
             </p>
             <span class="product__price">$ 2,999</span>
-            <a class="btn product__btn" href="#">See product</a>
+            <div class="btn-add">
+              <a href="#" class="btn-minus"></a>
+              <span class="btn-num">1</span>
+              <a href="#" class="btn-plus"></a>
+            </div>
+            <a class="btn product__btn pr-detail__btn" href="#">Add to cart</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="product-info">
     <div class="container">
       <div class="product-info__inner">
         <div class="features">
-          <h3 class="tertiary-heading">Features</h3>
+          <h3 class="tertiary-heading features__heading">Features</h3>
           <p class="text product__text">
             Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for
             those who like to enjoy endless listening. It includes intuitive controls designed for any situation.
@@ -86,15 +92,93 @@
           </p>
         </div>
         <div class="box">
-          <h3 class="tertiary-heading">In the box</h3>
+          <h3 class="tertiary-heading box__heading">In the box</h3>
           <ul class="box-list">
-            <li class="box-list__item">Headphone unit</li>
-            <li class="box-list__item">Replacement earcups</li>
-            <li class="box-list__item">User manual</li>
-            <li class="box-list__item">3.5mm 5m audio cable</li>
-            <li class="box-list__item">Travel bag</li>
+            <li class="text box-list__item"><span class="box-list__num">1x</span>Headphone unit</li>
+            <li class="text box-list__item"><span class="box-list__num">2x</span>Replacement earcups</li>
+            <li class="text box-list__item"><span class="box-list__num">1x</span>User manual</li>
+            <li class="text box-list__item"><span class="box-list__num">1x</span>3.5mm 5m audio cable</li>
+            <li class="text box-list__item"><span class="box-list__num">1x</span>Travel bag</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="image-wrapper">
+    <div class="container">
+      <div class="wrapper-inner">
+        <div class="wrapper-left">
+          <picture class="wrapper-left__img">
+            <source media="(max-width: 600px)" srcset="./images/pr-detail/wrapper-img_man-phone.jpg" width="327"
+              height="174">
+            <source media="(max-width: 900px)" srcset="./images/pr-detail/wrapper-img_man-tablet.jpg" width="277"
+              height="174">
+            <img src="./images/pr-detail/wrapper-img_man.jpg" width="445" height="280" alt="man image">
+          </picture>
+          <picture class="wrapper-left__img">
+            <source media="(max-width: 600px)" srcset="./images/pr-detail/wrapper-img_shoes-phone.jpg" width="327"
+              height="174">
+            <source media="(max-width: 900px)" srcset="./images/pr-detail/wrapper-img_shoes-tablet.jpg" width="277"
+              height="174">
+            <img src="./images/pr-detail/wrapper-img_shoes.jpg" width="445" height="280" alt="man image">
+          </picture>
+        </div>
+        <div class="wrapper-right">
+          <picture class="wrapper-right__img">
+            <source media="(max-width: 600px)" srcset="./images/pr-detail/wrapper-img_headphone-phone.jpg" width="327"
+              height="368">
+            <source media="(max-width: 900px)" srcset="./images/pr-detail/wrapper-img_headphone-tablet.jpg" width="395"
+              height="368">
+            <img src="./images/pr-detail/wrapper-img_headphone.jpg" width="635" height="592" alt="man image">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="other-product">
+    <div class="container">
+      <div class="other-product__inner">
+        <h3 class="u-text-center other-product__heading">You may also like</h3>
+        <div class="other-cards">
+          <div class="other-card">
+            <picture >
+              <source media="(max-width: 600px)" srcset="./images/pr-detail/other-card1__phone.jpg" width="327"
+                height="120">
+              <source media="(max-width: 900px)" srcset="./images/pr-detail/other-card1__tablet.jpg" width="223"
+                height="318">
+              <img class="other-card__img" src="./images/pr-detail/other-card1.jpg" width="350" height="318" alt="">
+            </picture>
+            <h5 class="other-card__heading">XX99 MARK I</h5>
+            <a href="#" class="btn other-card__btn">See product</a>
+          </div>
+
+          <div class="other-card">
+            <picture class="other-card__img">
+              <source media="(max-width: 600px)" srcset="./images/pr-detail/other-card2__phone.jpg" width="327"
+                height="120">
+              <source media="(max-width: 900px)" srcset="./images/pr-detail/other-card2__tablet.jpg" width="223"
+                height="318">
+              <img src="./images/pr-detail/other-card2.jpg" width="350" height="318" alt="">
+            </picture>
+            <h5 class="other-card__heading">XX59</h5>
+            <a href="#" class="btn other-card__btn">See product</a>
+          </div>
+
+          <div class="other-card">
+            <picture class="other-card__img">
+              <source media="(max-width: 600px)" srcset="./images/pr-detail/other-card3__phone.jpg" width="327"
+                height="120">
+              <source media="(max-width: 900px)" srcset="./images/pr-detail/other-card3__tablet.jpg" width="223"
+                height="318">
+              <img src="./images/pr-detail/other-card3.jpg" width="350" height="318" alt="">
+            </picture>
+            <h5 class="other-card__heading">ZX9 Speaker</h5>
+            <a href="#" class="btn other-card__btn">See product</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -115,7 +199,7 @@
 
 
 
-  <section class="shop-cards">
+  <section class="shop-cards cards">
     <div class="container">
       <div class="shop-cards__inner">
         <div class="shop-card">
