@@ -1,7 +1,7 @@
 .yx1-img {
   background-image: url(../../images/page-headphones/yx1.png);
   background-repeat: no-repeat;
-  background-position: top bottom 4rem;
+  background-position: center bottom 4rem;
 
   @include respond (tablet) {
     background-size: 22rem 26rem;

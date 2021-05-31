@@ -988,7 +988,7 @@ template {
 .yx1-img {
   background-image: url(../../images/page-headphones/yx1.png);
   background-repeat: no-repeat;
-  background-position: top bottom 4rem;
+  background-position: center bottom 4rem;
 }
 
 @media only screen and (max-width: 56.25em) {
