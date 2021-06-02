@@ -13,13 +13,57 @@
   <header class="header">
     <div class="container">
       <div class="header-inner">
-        <span class="burger-menu"></span>
+        <span class="burger-menu" onclick="nav()"></span>
+        <div class="menu-container" id="menu_container">
+          <div class="menu" id="menu">
+            <section class="shop-cards">
+              <div class="container">
+                <div class="shop-cards__inner">
+                  <a href="headphones.html" class="shop-card__link">
+                    <div class="shop-card">
+                      <picture>
+                        <source media="(max-width:900px)" srcset="./images/shopcard-headphones__tablet.png">
+                        <img class="shop-card__img" src="./images/shopcard-headphones.png" width="180" height="160"
+                          alt="headphone image">
+                      </picture>
+                      <h6 class="shop-card__heading">Headphones</h6>
+                      <span class="btn btn--min">Shop</span>
+                    </div>
+                  </a>
+                  <a href="speakers.html" class="shop-card__link">
+                    <div class="shop-card">
+                      <picture>
+                        <source media="(max-width: 900px)" srcset="./images/shopcard-speaker__tablet.png">
+                        <img class="shop-card__img" src="./images/shopcard-speaker.png" width="180" height="160"
+                          alt="speaker image">
+                      </picture>
+                      <h6 class="shop-card__heading">Speakers</h6>
+                      <sapn class="btn btn--min">Shop</sapn>
+                    </div>
+                  </a>
+                  <a href="earphones.html" class="shop-card__link">
+                    <div class="shop-card">
+                      <picture>
+                        <source media="(max-width:900px)" srcset="./images/shopcard-earphones__tablet.png">
+                        <img class="shop-card__img" src="./images/shopcard-earphones.png" width="180" height="160"
+                          alt="Earphones image">
+                      </picture>
+                      <h6 class="shop-card__heading">Earphones</h6>
+                      <sapn class="btn btn--min">Shop</sapn>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
         <a class="logo" href="index.html">
           <img class="logo__img" src="images/logo.svg" alt="logo brand">
         </a>
         <nav class="nav header-nav">
           <ul class="nav-list header-list">
-            <li class="nav-list__item header-list__item"><a href="index.html" class="nav-list__link header-list__link">home</a>
+            <li class="nav-list__item header-list__item"><a href="index.html"
+                class="nav-list__link header-list__link">home</a>
             </li>
             <li class="nav-list__item header-list__item">
               <a href="headphones.html" class="nav-list__link header-list__link">headphones</a>
@@ -32,11 +76,65 @@
             </li>
           </ul>
         </nav>
-        <a class="cart" href="#">
-          <svg class="cart__icon" width="23" height="20">
-            <use xlink:href="./images/sprites.svg#i-cart"></use>
-          </svg>
-        </a>
+        <label class="cart" for="cart">
+          <span class="cart__icon">
+            <svg width="23" height="20">
+              <use xlink:href="./images/sprites.svg#i-cart"></use>
+            </svg>
+          </span>
+        </label>
+        <input class="cart__input" id="cart" type="checkbox">
+        <div class="cart-container">
+          <div class="container">
+            <div class="cart-body">
+              <div class="cart-top">
+                <h6 class="cart__heading">Cart(3)</h6>
+                <span class="cart__remove">Remove all</span>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img1.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">XX99 MK II</p>
+                  <p class="cart-product__price">$ 2,999</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img2.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">XX59</p>
+                  <p class="cart-product__price">$ 899</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img3.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">YX1</p>
+                  <p class="cart-product__price">$ 599</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-bottom">
+                <p class="text cart-bottom__text">TOTAL</p>
+                <p class="cart-bottom__price">$ 5,396</p>
+              </div>
+              <a href="checkout.html" class="btn cart-btn">checkout</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -54,7 +152,7 @@
         <p class="text text--light hero-text">
           Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
         </p>
-        <a class="btn" href="#">See product</a>
+        <a class="btn" href="headphone-xx99-II.html">See product</a>
       </div>
     </div>
   </section>
@@ -62,33 +160,39 @@
   <section class="section-cards shop-cards">
     <div class="container">
       <div class="shop-cards__inner">
-        <div class="shop-card">
-          <picture>
-            <source media="(max-width:900px)" srcset="./images/shopcard-headphones__tablet.png">
-            <img class="shop-card__img" src="./images/shopcard-headphones.png" width="180" height="160"
-              alt="headphone image">
-          </picture>
-          <h6 class="shop-card__heading">Headphones</h6>
-          <a class="btn btn--min" href="#">Shop</a>
-        </div>
-        <div class="shop-card">
-          <picture>
-            <source media="(max-width: 900px)" srcset="./images/shopcard-speaker__tablet.png">
-            <img class="shop-card__img" src="./images/shopcard-speaker.png" width="180" height="160"
-              alt="speaker image">
-          </picture>
-          <h6 class="shop-card__heading">Speakers</h6>
-          <a class="btn btn--min" href="#">Shop</a>
-        </div>
-        <div class="shop-card">
-          <picture>
-            <source media="(max-width:900px)" srcset="./images/shopcard-earphones__tablet.png">
-            <img class="shop-card__img" src="./images/shopcard-earphones.png" width="180" height="160"
-              alt="Earphones image">
-          </picture>
-          <h6 class="shop-card__heading">Earphones</h6>
-          <a class="btn btn--min" href="#">Shop</a>
-        </div>
+        <a href="headphones.html" class="shop-card__link">
+          <div class="shop-card">
+            <picture>
+              <source media="(max-width:900px)" srcset="./images/shopcard-headphones__tablet.png">
+              <img class="shop-card__img" src="./images/shopcard-headphones.png" width="180" height="160"
+                alt="headphone image">
+            </picture>
+            <h6 class="shop-card__heading">Headphones</h6>
+            <span class="btn btn--min">Shop</span>
+          </div>
+        </a>
+        <a href="speakers.html" class="shop-card__link">
+          <div class="shop-card">
+            <picture>
+              <source media="(max-width: 900px)" srcset="./images/shopcard-speaker__tablet.png">
+              <img class="shop-card__img" src="./images/shopcard-speaker.png" width="180" height="160"
+                alt="speaker image">
+            </picture>
+            <h6 class="shop-card__heading">Speakers</h6>
+            <sapn class="btn btn--min">Shop</sapn>
+          </div>
+        </a>
+        <a href="earphones.html" class="shop-card__link">
+          <div class="shop-card">
+            <picture>
+              <source media="(max-width:900px)" srcset="./images/shopcard-earphones__tablet.png">
+              <img class="shop-card__img" src="./images/shopcard-earphones.png" width="180" height="160"
+                alt="Earphones image">
+            </picture>
+            <h6 class="shop-card__heading">Earphones</h6>
+            <sapn class="btn btn--min">Shop</sapn>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -106,7 +210,7 @@
           <p class="text text--light speaker1__text">
             Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
           </p>
-          <a class="btn btn--dark speaker1__btn" href="#">See product</a>
+          <a class="btn btn--dark speaker1__btn" href="speaker-zx9.html">See product</a>
         </div>
       </div>
     </div>
@@ -116,7 +220,7 @@
     <div class="container">
       <div class="speaker2-inner">
         <h4 class="tertiary-heading speaker2__heading">ZX7 Speaker</h4>
-        <a class="btn btn--light speaker2__btn" href="#">See product</a>
+        <a class="btn btn--light speaker2__btn" href="speaker-zx7.html">See product</a>
       </div>
     </div>
   </section>
@@ -127,7 +231,7 @@
         <div class="earphone-img"></div>
         <div class="earphone-text">
           <h4 class="tertiary-heading earphone-text__heading">YX1 Earphoes</h4>
-          <a class="btn btn--light earphone-text__btn" href="#">see product</a>
+          <a class="btn btn--light earphone-text__btn" href="earphones-yx1.html">see product</a>
         </div>
       </div>
     </div>
@@ -172,7 +276,8 @@
           </a>
           <nav class="nav footer-nav">
             <ul class="nav-list footer-list">
-              <li class="nav-list__item footer-list__item"><a href="index.html" class="nav-list__link footer-list__link">home</a>
+              <li class="nav-list__item footer-list__item"><a href="index.html"
+                  class="nav-list__link footer-list__link">home</a>
               </li>
               <li class="nav-list__item footer-list__item"><a href="headphones.html"
                   class="nav-list__link footer-list__link">headphones</a></li>
@@ -214,6 +319,7 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>

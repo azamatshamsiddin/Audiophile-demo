@@ -19,11 +19,11 @@
   margin-top: 8rem;
 
   @include respond (tablet) {
-    margin-top: 3.3rem;
+    margin-top: 12.3rem;
   }
 
   @include respond (phone) {
-    margin-top: 1.6rem;
+    margin-top: 10.6rem;
     margin-bottom: 8.8rem;
   }
 }

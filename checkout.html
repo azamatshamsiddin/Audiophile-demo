@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audiophile | Speakers</title>
+  <title>Audiophile | Checkout</title>
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -13,7 +13,7 @@
   <header class="header header--black">
     <div class="container">
       <div class="header-inner">
-       <span class="burger-menu" onclick="nav()"></span>
+        <span class="burger-menu" onclick="nav()"></span>
         <div class="menu-container" id="menu_container">
           <div class="menu" id="menu">
             <section class="shop-cards">
@@ -57,7 +57,6 @@
             </section>
           </div>
         </div>
-
         <a class="logo" href="index.html">
           <img class="logo__img" src="images/logo.svg" alt="logo brand">
         </a>
@@ -86,117 +85,68 @@
     </div>
   </header>
 
-  <section class="page-hero">
+  <section class="checkout">
     <div class="container">
-      <h2 class="secondary-heading page-heading">Speakers</h2>
+      <a class="text btn--back" href="index.html">Go back</a>
+      <form action="https://echo.htmlacademy.ru" class="checkout-form">
+        <h3 class="tertiary-heading form-heding">Checkout</h3>
+        <div class="billing">
+          <h6 class="billing__heading form-block__heading">Billing details</h6>
+          <label for="name" class="form__label">Name
+            <input class="form__input" type="text" id="name" placeholder="Alexei Ward">
+          </label>
+          <label for="email" class="form__label">
+            Email Address
+            <input type="email" class="form__input" id="email" plaseholder="alexei@mail.com">
+          </label>
+          <label for="tel" class="form__label">
+            Phone Number
+            <input type="tel" class="form__input" id="tel" placeholder="+1 202-555-0136">
+          </label>
+        </div>
+
+
+        <div class="shipping">
+          <h6 class="shipping__heading form-block__heading">Shipping info</h6>
+          <label for="name" class="form__label">Address
+            <input class="form__input addres__input" type="text" id="address" placeholder="1137 Williams Avenue">
+          </label>
+          <label for="zip_code" class="form__label">
+            ZIP Code
+            <input type="number" maxlength="5" class="form__input" id="zip_code" plaseholder="10001">
+          </label>
+
+          <label for="city" class="form__label">
+            City
+            <input type="text" class="form__input" id="city" placeholder="New York">
+          </label>
+
+          <label for="country" class="form__label">
+            Country
+            <input type="text" class="form__input" id="country" placeholder="United States">
+          </label>
+        </div>
+
+        <div class="payment">
+          <h6 class="payment__heading form-block__heading">Payment details</h6>
+          .
+ 
+
+          <label for="e-number" class="form__label">
+            e-Money Number
+            <input type="number" maxlength="9" class="form__input" id="e-number" placeholder="238521993">
+          </label>
+
+          <label for="e-pin" class="form__label">
+            e-Money PIN
+            <input type="password" class="form__input" id="e-pin" placeholder="6891">
+          </label>
+        </div>
+
+      </form>
     </div>
   </section>
 
-  <section class="section-products">
-    <div class="container">
-      <div class="products">
-        <div class="product">
-          <div class="product-img zx9-img"></div>
-          <div class="product-text">
-            <p class="status status--active product__status">
-              New product
-            </p>
-            <h2 class="secondary-heading product__heading">
-              ZX9 <br>
-              SPEAKER
-            </h2>
-            <p class="text product__text">
-              Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers
-              truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.
-            </p>
-            <a class="btn product__btn" href="speaker-zx9.html">See product</a>
-          </div>
-        </div>
-
-        <div class="product">
-          <div class="product-img zx7-img"></div>
-          <div class="product-text">
-            <h2 class="secondary-heading product__heading">
-              ZX7 <br>
-              SPEAKER
-            </h2>
-            <p class="text product__text">
-              Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile
-              components that represents the top of the line powered speakers for home or studio use.
-            </p>
-            <a class="btn product__btn" href="speaker-zx7.html">See product</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="shop-cards cards">
-    <div class="container">
-      <div class="shop-cards__inner">
-        <a href="headphones.html" class="shop-card__link">
-          <div class="shop-card">
-            <picture>
-              <source media="(max-width:900px)" srcset="./images/shopcard-headphones__tablet.png">
-              <img class="shop-card__img" src="./images/shopcard-headphones.png" width="180" height="160"
-                alt="headphone image">
-            </picture>
-            <h6 class="shop-card__heading">Headphones</h6>
-            <span class="btn btn--min">Shop</span>
-          </div>
-        </a>
-        <a href="speakers.html" class="shop-card__link">
-          <div class="shop-card">
-            <picture>
-              <source media="(max-width: 900px)" srcset="./images/shopcard-speaker__tablet.png">
-              <img class="shop-card__img" src="./images/shopcard-speaker.png" width="180" height="160"
-                alt="speaker image">
-            </picture>
-            <h6 class="shop-card__heading">Speakers</h6>
-            <span class="btn btn--min">Shop</span>
-          </div>
-        </a>
-        <a href="earphones.html" class="shop-card__link">
-          <div class="shop-card">
-            <picture>
-              <source media="(max-width:900px)" srcset="./images/shopcard-earphones__tablet.png">
-              <img class="shop-card__img" src="./images/shopcard-earphones.png" width="180" height="160"
-                alt="Earphones image">
-            </picture>
-            <h6 class="shop-card__heading">Earphones</h6>
-            <span class="btn btn--min">Shop</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="comment product-comment">
-    <div class="container">
-      <div class="comment-inner">
-        <div class="comment-left">
-          <h2 class="secondary-heading comment-heading">
-            Bringing you the <span class="comment-heading__text">best</span> audio gear
-          </h2>
-          <p class="text">Located at the heart of New York City, Audiophile is the premier store for high end
-            headphones,
-            earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms
-            available
-            for you to browse and experience a wide range of our products. Stop by our store to meet some of the
-            fantastic
-            people who make Audiophile the best place to buy your portable audio equipment.
-          </p>
-        </div>
-        <div class="comment-right">
-          <picture>
-            <source media="(max-width: 600px)" srcset="./images/comment-img__phone.jpg" width="327" height="300">
-            <source media="(max-width: 900px)" srcset="./images/comment-img__tablet.jpg" width="689" height="300">
-            <img class="comment-img" src="./images/comment-img.jpg" width="540" height="588" alt="comment image">
-          </picture>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!--=================== -->
   <!--======FOOTER======= -->

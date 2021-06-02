@@ -13,7 +13,50 @@
   <header class="header header--black">
     <div class="container">
       <div class="header-inner">
-        <span class="burger-menu"></span>
+        <span class="burger-menu"  onclick="nav()"></span>
+        <div class="menu-container" id="menu_container">
+          <div class="menu" id="menu">
+            <section class="shop-cards">
+              <div class="container">
+                <div class="shop-cards__inner">
+                  <a href="headphones.html" class="shop-card__link">
+                    <div class="shop-card">
+                      <picture>
+                        <source media="(max-width:900px)" srcset="./images/shopcard-headphones__tablet.png">
+                        <img class="shop-card__img" src="./images/shopcard-headphones.png" width="180" height="160"
+                          alt="headphone image">
+                      </picture>
+                      <h6 class="shop-card__heading">Headphones</h6>
+                      <span class="btn btn--min">Shop</span>
+                    </div>
+                  </a>
+                  <a href="speakers.html" class="shop-card__link">
+                    <div class="shop-card">
+                      <picture>
+                        <source media="(max-width: 900px)" srcset="./images/shopcard-speaker__tablet.png">
+                        <img class="shop-card__img" src="./images/shopcard-speaker.png" width="180" height="160"
+                          alt="speaker image">
+                      </picture>
+                      <h6 class="shop-card__heading">Speakers</h6>
+                      <sapn class="btn btn--min">Shop</sapn>
+                    </div>
+                  </a>
+                  <a href="earphones.html" class="shop-card__link">
+                    <div class="shop-card">
+                      <picture>
+                        <source media="(max-width:900px)" srcset="./images/shopcard-earphones__tablet.png">
+                        <img class="shop-card__img" src="./images/shopcard-earphones.png" width="180" height="160"
+                          alt="Earphones image">
+                      </picture>
+                      <h6 class="shop-card__heading">Earphones</h6>
+                      <sapn class="btn btn--min">Shop</sapn>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
         <a class="logo" href="index.html">
           <img class="logo__img" src="images/logo.svg" alt="logo brand">
         </a>
@@ -33,7 +76,7 @@
             </li>
           </ul>
         </nav>
-        <a class="cart" href="#">
+        <a class="cart" href="#cart">
           <svg class="cart__icon" width="23" height="20">
             <use xlink:href="./images/sprites.svg#i-cart"></use>
           </svg>
@@ -44,7 +87,7 @@
 
   <section class="section-products product-content">
     <div class="container">
-      <a class="text btn--back" href="#">Go back</a>
+      <a class="text btn--back" href="headphones.html">Go back</a>
       <div class="products">
         <div class="product pr-detail">
           <div class="pr-detail__img xx99-2-img"></div>
@@ -62,9 +105,9 @@
             </p>
             <span class="product__price">$ 2,999</span>
             <div class="btn-add">
-              <a href="#" class="btn-minus"></a>
+              <span class="btn-minus"></span>
               <span class="btn-num">1</span>
-              <a href="#" class="btn-plus"></a>
+              <span class="btn-plus"></span>
             </div>
             <a class="btn product__btn pr-detail__btn" href="#">Add to cart</a>
           </div>
@@ -143,7 +186,7 @@
         <h3 class="u-text-center other-product__heading">You may also like</h3>
         <div class="other-cards">
           <div class="other-card">
-            <picture >
+            <picture>
               <source media="(max-width: 600px)" srcset="./images/pr-detail/other-card1__phone.jpg" width="327"
                 height="120">
               <source media="(max-width: 900px)" srcset="./images/pr-detail/other-card1__tablet.jpg" width="223"
@@ -151,7 +194,7 @@
               <img class="other-card__img" src="./images/pr-detail/other-card1.jpg" width="350" height="318" alt="">
             </picture>
             <h5 class="other-card__heading">XX99 MARK I</h5>
-            <a href="#" class="btn other-card__btn">See product</a>
+            <a href="headphone-xx99-I.html" class="btn other-card__btn">See product</a>
           </div>
 
           <div class="other-card">
@@ -163,7 +206,7 @@
               <img src="./images/pr-detail/other-card2.jpg" width="350" height="318" alt="">
             </picture>
             <h5 class="other-card__heading">XX59</h5>
-            <a href="#" class="btn other-card__btn">See product</a>
+            <a href="headphone-xx59.html" class="btn other-card__btn">See product</a>
           </div>
 
           <div class="other-card">
@@ -175,60 +218,49 @@
               <img src="./images/pr-detail/other-card3.jpg" width="350" height="318" alt="">
             </picture>
             <h5 class="other-card__heading">ZX9 Speaker</h5>
-            <a href="#" class="btn other-card__btn">See product</a>
+            <a href="speaker-zx9.html" class="btn other-card__btn">See product</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <section class="shop-cards cards">
     <div class="container">
       <div class="shop-cards__inner">
-        <div class="shop-card">
-          <picture>
-            <source media="(max-width:900px)" srcset="./images/shopcard-headphones__tablet.png">
-            <img class="shop-card__img" src="./images/shopcard-headphones.png" width="180" height="160"
-              alt="headphone image">
-          </picture>
-          <h6 class="shop-card__heading">Headphones</h6>
-          <a class="btn btn--min" href="#">Shop</a>
-        </div>
-        <div class="shop-card">
-          <picture>
-            <source media="(max-width: 900px)" srcset="./images/shopcard-speaker__tablet.png">
-            <img class="shop-card__img" src="./images/shopcard-speaker.png" width="180" height="160"
-              alt="speaker image">
-          </picture>
-          <h6 class="shop-card__heading">Speakers</h6>
-          <a class="btn btn--min" href="#">Shop</a>
-        </div>
-        <div class="shop-card">
-          <picture>
-            <source media="(max-width:900px)" srcset="./images/shopcard-earphones__tablet.png">
-            <img class="shop-card__img" src="./images/shopcard-earphones.png" width="180" height="160"
-              alt="Earphones image">
-          </picture>
-          <h6 class="shop-card__heading">Earphones</h6>
-          <a class="btn btn--min" href="#">Shop</a>
-        </div>
+        <a href="headphones.html" class="shop-card__link">
+          <div class="shop-card">
+            <picture>
+              <source media="(max-width:900px)" srcset="./images/shopcard-headphones__tablet.png">
+              <img class="shop-card__img" src="./images/shopcard-headphones.png" width="180" height="160"
+                alt="headphone image">
+            </picture>
+            <h6 class="shop-card__heading">Headphones</h6>
+            <span class="btn btn--min">Shop</span>
+          </div>
+        </a>
+        <a href="speakers.html" class="shop-card__link">
+          <div class="shop-card">
+            <picture>
+              <source media="(max-width: 900px)" srcset="./images/shopcard-speaker__tablet.png">
+              <img class="shop-card__img" src="./images/shopcard-speaker.png" width="180" height="160"
+                alt="speaker image">
+            </picture>
+            <h6 class="shop-card__heading">Speakers</h6>
+            <span class="btn btn--min">Shop</span>
+          </div>
+        </a>
+        <a href="earphones.html" class="shop-card__link">
+          <div class="shop-card">
+            <picture>
+              <source media="(max-width:900px)" srcset="./images/shopcard-earphones__tablet.png">
+              <img class="shop-card__img" src="./images/shopcard-earphones.png" width="180" height="160"
+                alt="Earphones image">
+            </picture>
+            <h6 class="shop-card__heading">Earphones</h6>
+            <span class="btn btn--min">Shop</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -315,6 +347,8 @@
       </div>
     </div>
   </footer>
+  <script src="./scripts/script.js"></script>
+
 </body>
 
 </html>
