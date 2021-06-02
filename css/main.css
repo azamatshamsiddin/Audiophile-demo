@@ -848,6 +848,142 @@ template {
   color: #d87d4a;
 }
 
+.checkout {
+  margin-top: 9rem;
+  margin-bottom: 14rem;
+  display: flex;
+}
+
+.checkout-form {
+  max-width: 73rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 4.8rem;
+}
+
+.form-block {
+  margin-top: 4rem;
+}
+
+.form-block__heading {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d87d4a;
+}
+
+.form-block__inputs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.2px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  max-width: 31rem;
+  width: 100%;
+  margin-top: 2.4rem;
+}
+
+.form__input {
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 1.9rem 2.4rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: #000;
+  outline: none;
+  margin-top: 1rem;
+}
+
+.form__input::placeholder {
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.form__input:focus {
+  border: 1px solid #d87d4a;
+}
+
+.addres__input {
+  display: block;
+  width: 100%;
+}
+
+.payment-radio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-radio__label {
+  flex-direction: row;
+  margin-top: 0;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 1.9rem 2.4rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: -0.25px;
+  color: #000;
+  outline: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 31rem;
+}
+
+.payment-radio__label:focus {
+  border: 1px solid #d87d4a;
+}
+
+.payment-radio__input {
+  display: none;
+}
+
+.payment-radio__input:checked + .form__label .radio-btn::after {
+  opacity: 1;
+}
+
+.radio-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+  margin-right: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio-btn::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: #d87d4a;
+  border-radius: 50%;
+  opacity: 0;
+}
+
 .logo {
   transition: all .3s ease;
 }
@@ -1292,6 +1428,17 @@ template {
 
 .page-heading {
   color: #fff;
+}
+
+.summary {
+  max-width: 35rem;
+  display: flex;
+  justify-self: space-between;
+}
+
+.summary .cart-body {
+  margin-top: 0;
+  display: block;
 }
 
 .yx1-img {

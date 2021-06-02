@@ -1,0 +1,137 @@
+.checkout{
+  margin-top: 9rem;
+  margin-bottom: 14rem;
+  display: flex;
+}
+
+.checkout-form {
+  max-width: 73rem;
+  width: 100%;
+  background-color: $color-white;
+  border-radius: 8px;
+  padding: 4.8rem;
+}
+
+.form-block {
+  margin-top: 4rem;
+
+  &__heading {
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form {
+  &__label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.2px;
+    color: $color-black;
+    display: flex;
+    flex-direction: column;
+    max-width: 31rem;
+    width: 100%;
+    margin-top: 2.4rem;
+  }
+
+  &__input {
+    background-color: $color-white;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    padding: 1.9rem 2.4rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    letter-spacing: -0.25px;
+    color: $color-black;
+    outline: none;
+    margin-top: 1rem;
+
+    &::placeholder {
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      letter-spacing: -0.25px;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+}
+
+.addres__input{
+  display: block;
+  width: 100%;
+}
+
+.payment-radio {
+  display: flex;
+  justify-content: space-between;
+
+  &__label {
+    flex-direction: row;
+    margin-top: 0;
+    align-items: center;
+    cursor: pointer;
+    background-color: $color-white;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    padding: 1.9rem 2.4rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    letter-spacing: -0.25px;
+    color: $color-black;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 31rem;
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__input {
+    display: none;
+
+
+
+    &:checked+.form__label .radio-btn::after {
+      opacity: 1;
+    }
+  }
+}
+
+.radio-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+  margin-right: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    @include baElements (1rem, 1rem);
+    background-color: $color-primary;
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+
