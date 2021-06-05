@@ -10,10 +10,10 @@
 </head>
 
 <body>
-  <header class="header header--black">
+  <header class="header">
     <div class="container">
       <div class="header-inner">
-       <span class="burger-menu"  onclick="nav()"></span>
+        <span class="burger-menu" onclick="nav()"></span>
         <div class="menu-container" id="menu_container">
           <div class="menu" id="menu">
             <section class="shop-cards">
@@ -76,11 +76,65 @@
             </li>
           </ul>
         </nav>
-        <a class="cart" href="#cart">
-          <svg class="cart__icon" width="23" height="20">
-            <use xlink:href="./images/sprites.svg#i-cart"></use>
-          </svg>
-        </a>
+        <label class="cart" for="cart">
+          <span class="cart__icon">
+            <svg width="23" height="20">
+              <use xlink:href="./images/sprites.svg#i-cart"></use>
+            </svg>
+          </span>
+        </label>
+        <input class="cart__input" id="cart" type="checkbox">
+        <div class="cart-container">
+          <div class="container">
+            <div class="cart-body">
+              <div class="cart-top">
+                <h6 class="cart__heading">Cart(3)</h6>
+                <span class="cart__remove">Remove all</span>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img1.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">XX99 MK II</p>
+                  <p class="cart-product__price">$ 2,999</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img2.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">XX59</p>
+                  <p class="cart-product__price">$ 899</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img3.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">YX1</p>
+                  <p class="cart-product__price">$ 599</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-bottom">
+                <p class="text cart-bottom__text">TOTAL</p>
+                <p class="cart-bottom__price">$ 5,396</p>
+              </div>
+              <a href="checkout.html" class="btn cart-btn">checkout</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -184,7 +238,7 @@
             <picture>
               <source media="(max-width: 600px)" srcset="./images/pr-detail/other-card4_phone.jpg" width="327"
                 height="120">
-              <source media="(max-width: 900px)" srcset="./images/pr-detail/other-card4_tablet.jpg" width="223"
+              <source media="(max-width: 900px)" srcset="./images/pr-detail/other-card4__tablet.jpg" width="223"
                 height="318">
               <img class="other-card__img" src="./images/pr-detail/other-card4.jpg" width="350" height="318" alt="">
             </picture>

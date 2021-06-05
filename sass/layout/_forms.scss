@@ -1,63 +1,116 @@
-.checkout{
-  margin-top: 9rem;
+.checkout {
   margin-bottom: 14rem;
-  display: flex;
+
+  @include respond (tablet) {
+    margin-bottom: 11.6rem;
+  }
+
+  @include respond (phone) {
+    margin-bottom: 9.7rem;
+  }
+
+
+  & .btn--back {
+    margin-top: 8rem;
+
+    @include respond(phone) {
+      margin-top: 11rem;
+    }
+  }
 }
 
 .checkout-form {
   max-width: 73rem;
-  width: 100%;
   background-color: $color-white;
   border-radius: 8px;
-  padding: 4.8rem;
-}
+  padding: 5.4rem 4.8rem 4.8rem;
+  width: 100%;
 
-.form-block {
-  margin-top: 4rem;
-
-  &__heading {
-    font-weight: bold;
-    font-size: 1.3rem;
-    line-height: 2.5rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: $color-primary;
+  @include respond (tablet) {
+    max-width: 100%;
+    padding: 3rem 2.8rem;
   }
 
-  &__inputs {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  @include respond (phone) {
+    padding: 2.4rem;
   }
 }
 
 .form {
-  &__label {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond (tablet) {
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin-bottom: 4rem;
+  }
+
+  &__block {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+
+      @include respond (phone) {
+        margin-bottom: 3.2rem;
+
+      }
+    }
+  }
+
+  &__subtitle {
     font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-primary;
+    margin-bottom: 1.6rem;
+  }
+
+  &__label {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
     letter-spacing: -0.2px;
     color: $color-black;
-    display: flex;
-    flex-direction: column;
-    max-width: 31rem;
-    width: 100%;
-    margin-top: 2.4rem;
+    margin-bottom: 9px;
   }
 
   &__input {
-    background-color: $color-white;
-    border: 1px solid #cfcfcf;
+    display: block;
+    background: $color-white;
+    border: 1px solid #CFCFCF;
     border-radius: 8px;
-    padding: 1.9rem 2.4rem;
+    padding: 1.8rem 2.4rem;
+    width: 100%;
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 1.9rem;
     letter-spacing: -0.25px;
     color: $color-black;
     outline: none;
-    margin-top: 1rem;
+    transition: all .3s ease;
+
+    &:hover {
+      border-color: $color-primary;
+
+    }
+
+    &:focus {
+      border-color: $color-primary;
+    }
+
+    &:invalid {
+      border: 1px solid #CD2C2C;
+    }
+
 
     &::placeholder {
       font-weight: bold;
@@ -66,44 +119,67 @@
       letter-spacing: -0.25px;
       color: rgba(0, 0, 0, 0.4);
     }
-
-    &:focus {
-      border: 1px solid $color-primary;
-    }
   }
 }
 
-.addres__input{
-  display: block;
+.form-group {
+  max-width: 30.9rem;
   width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  &__radio {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include respond (phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__address {
+    width: 100%;
+    margin-bottom: 2.4rem;
+  }
 }
 
-.payment-radio {
+.form-radio {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  max-width: 30.9rem;
+  width: 100%;
 
   &__label {
-    flex-direction: row;
-    margin-top: 0;
-    align-items: center;
-    cursor: pointer;
-    background-color: $color-white;
-    border: 1px solid #cfcfcf;
-    border-radius: 8px;
-    padding: 1.9rem 2.4rem;
+    display: flex;
     font-weight: bold;
-    font-size: 1.4rem;
-    line-height: 1.9rem;
+    font-size: 14px;
+    line-height: 19px;
     letter-spacing: -0.25px;
     color: $color-black;
-    outline: none;
-    margin-top: 1rem;
-    cursor: pointer;
-    width: 31rem;
+    background: $color-white;
+    border: 1px solid #CFCFCF;
+    border-radius: 8px;
+    max-width: 30.9rem;
+    width: 100%;
+    padding: 1.8rem 1.6rem;
+    transition: all .3s ease;
 
-    &:focus {
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+
+    &:last-child {
+      margin-bottom: 2.4rem;
+    }
+
+    &:hover {
+      cursor: pointer;
       border: 1px solid $color-primary;
     }
+
   }
 
   &__input {
@@ -111,27 +187,256 @@
 
 
 
-    &:checked+.form__label .radio-btn::after {
+    &:checked+.form-radio__label .radio-btn::after {
       opacity: 1;
     }
+
+    &:checked+.form-radio__label {
+      border: 1px solid $color-primary;
+    }
+
   }
 }
 
 .radio-btn {
+  display: flex;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #CFCFCF;
   margin-right: 1.6rem;
-  display: flex;
   align-items: center;
   justify-content: center;
 
   &::after {
-    @include baElements (1rem, 1rem);
+    @include baElements(1rem, 1rem);
     background-color: $color-primary;
     border-radius: 50%;
     opacity: 0;
   }
 }
 
+
+.summary {
+  padding: 3.2rem 3.3rem;
+  background-color: $color-white;
+  max-width: 35rem;
+  min-height: 61.2rem;
+  height: 100%;
+  border-radius: 8px;
+  width: 100%;
+  margin-left: 1.5rem;
+
+  @include respond(tablet) {
+    margin-left: 0;
+    max-width: 100%;
+    margin-top: 3.2rem;
+  }
+
+  & .btn {
+    cursor: pointer;
+  }
+}
+
+
+.summary-product__value {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+}
+
+.summary-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.summary-grand {
+  margin-top: 2.4rem;
+
+  &__price {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+}
+
+
+// ****************
+.order-info {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+
+  &__popup {
+    max-width: 54rem;
+    width: 100%;
+    background-color: $color-white;
+    border-radius: 8px;
+    padding: 4.8rem;
+
+    @include respond(phone) {
+      max-width: 33rem;
+      padding: 3.2rem;
+      margin-top: 100px;
+    }
+  }
+}
+
+.popup {
+  position: relative;
+
+  &::before {
+    @include baElements(6.4rem, 6.4rem);
+    background-image: url(../../images/i-tick.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__heading {
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: $color-black;
+    margin-top: 3.3rem;
+    margin-bottom: 2.4rem;
+
+    @include respond(phone) {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      letter-spacing: 1px;
+      margin-top: 2.3rem;
+      margin-bottom: 1.6rem;
+
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 3.3rem;
+
+    @include respond(phone) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 4.5rem;
+
+    @include respond (phone) {
+      margin-top: 2.3rem;
+    }
+  }
+}
+
+.popup-info {
+  display: flex;
+  justify-content: space-between;
+  max-width: 44.4rem;
+  width: 100%;
+
+  @include respond (phone) {
+    flex-direction: column;
+  }
+}
+
+.popup-product {
+  background: #F1F1F1;
+  border-radius: 8px 0 0 8px;
+  width: 100%;
+  padding: 2.4rem;
+
+  @include respond(phone) {
+    border-radius: 8px 8px 0 0;
+
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 1.2rem;
+  }
+
+
+  &__name {
+    color: $color-black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  &__price {
+    opacity: 0.5;
+  }
+
+  &__value {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.214286px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+
+  &__total {
+    background-color: $color-black;
+    width: 32rem;
+    border-radius: 0px 8px 8px 0px;
+    padding: 4.1rem 3.2rem;
+
+    @include respond (phone) {
+      border-radius: 0 0 8px 8px;
+      width: 100%;
+      padding: 1.5rem 2.4rem 1.9rem;
+    }
+  }
+
+  &__total-title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  &__total-price {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+}
+
+#order_info:target {
+  display: flex;
+}

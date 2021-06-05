@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="header header--black">
+  <header class="header">
     <div class="container">
       <div class="header-inner">
         <span class="burger-menu" onclick="nav()"></span>
@@ -76,147 +76,221 @@
             </li>
           </ul>
         </nav>
-        <a class="cart" href="#cart">
-          <svg class="cart__icon" width="23" height="20">
-            <use xlink:href="./images/sprites.svg#i-cart"></use>
-          </svg>
-        </a>
+        <label class="cart" for="cart">
+          <span class="cart__icon">
+            <svg width="23" height="20">
+              <use xlink:href="./images/sprites.svg#i-cart"></use>
+            </svg>
+          </span>
+        </label>
+        <input class="cart__input" id="cart" type="checkbox">
+        <div class="cart-container">
+          <div class="container">
+            <div class="cart-body">
+              <div class="cart-top">
+                <h6 class="cart__heading">Cart(3)</h6>
+                <span class="cart__remove">Remove all</span>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img1.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">XX99 MK II</p>
+                  <p class="cart-product__price">$ 2,999</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img2.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">XX59</p>
+                  <p class="cart-product__price">$ 899</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-product">
+                <img class="cart-product__img" src="./images/cart-img3.jpg" alt="product image">
+                <div class="cart-product__info">
+                  <p class="text cart-product__name">YX1</p>
+                  <p class="cart-product__price">$ 599</p>
+                </div>
+                <div class="cart-add">
+                  <span class="cart-add__minus"></span>
+                  <span class="cart-add__num">1</span>
+                  <span class="cart-add__plus"></span>
+                </div>
+              </div>
+              <div class="cart-bottom">
+                <p class="text cart-bottom__text">TOTAL</p>
+                <p class="cart-bottom__price">$ 5,396</p>
+              </div>
+              <a href="checkout.html" class="btn cart-btn">checkout</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
   <section class="checkout">
     <div class="container">
-      <a class="text btn--back" href="index.html">Go back</a>
-      <form action="https://echo.htmlacademy.ru" class="checkout-form" method="GET">
-        <h3 class="tertiary-heading form-heding">Checkout</h3>
-        <div class="billing form-block">
-          <h6 class="billing__heading form-block__heading">Billing details</h6>
-          <div class="form-block__inputs">
-            <label for="name" class="form__label">Name
-              <input class="form__input" type="text" name="name" id="name" placeholder="Alexei Ward" autocomplete="off"
-                required>
-            </label>
-            <label for="email" class="form__label">
-              Email Address
-              <input type="email" class="form__input" name="email" id="email" placeholder="alexei@mail.com"
-                autocomplete="off" required>
-            </label>
-            <label for="tel" class="form__label">
-              Phone Number
-              <input type="tel" class="form__input" id="tel" name="tel" placeholder="+1 202-555-0136" autocomplete="off"
-                required>
-            </label>
-          </div>
-        </div>
+      <a class="text btn--back" href="headphones.html">Go back</a>
+      <form action="#" method="GET" class="form">
+        <div class="checkout-form">
+          <h3 class="tertiary-heading form__heading">checkout</h3>
 
-        <div class="shipping form-block">
-          <h6 class="shipping__heading form-block__heading">Shipping info</h6>
-          <div class="form-block__inputs">
-            <label for="address" class="form__label">Address
-              <input class="form__input addres__input" type="text" name="address" id="address"
-                placeholder="1137 Williams Avenue" autocomplete="off" required>
-            </label>
-            <label for="zip_code" class="form__label">
-              ZIP Code
-              <input type="number" maxlength="5" class="form__input" name="zip_code" id="zip_code" placeholder="10001"
-                autocomplete="off" required>
-            </label>
-
-            <label for="city" class="form__label">
-              City
-              <input type="text" class="form__input" id="city" name="city" placeholder="New York" autocomplete="off"
-                required>
-            </label>
-
-            <label for="country" class="form__label">
-              Country
-              <input type="text" class="form__input" id="country" name="country" placeholder="United States"
-                autocomplete="off" required>
-            </label>
-          </div>
-        </div>
-
-        <div class="payment form-block">
-          <h6 class="payment__heading form-block__heading">Payment details</h6>
-          <div class="payment-radio">
-            <label class="form__label" for="e-payment">Payment Method</label>
-            <div class="radio-group">
-              <input class="radio-group__input payment-radio__input" type="radio" name="e-payment" id="e_card" required>
-              <label class="form__label payment-radio__label" for="e_card">
-                <span class="radio-btn"></span> e-Money</label>
-              <input class="radio-group__input payment-radio__input" type="radio" name="e-payment" id="e_cash" required>
-              <label class="form__label payment-radio__label" for="e_cash"><span class="radio-btn"></span>Cash on
-                Delivery</label>
+          <p class="form__subtitle">Billing Details</p>
+          <div class="form__block">
+            <div class="form-group">
+              <label for="name" class="form__label">Name</label>
+              <input class="form__input" type="text" placeholder="Alexei Ward" id="name" name="name" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="email" class="form__label">Eamil Address</label>
+              <input class="form__input" type="email" placeholder="alexei@mail.com" id="email" name="email"
+                autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="tel" class="form__label">Phone Number</label>
+              <input class="form__input" type="tel" placeholder="+1 202-555-0136" id="tel" name="tel"
+                autocomplete="off">
             </div>
           </div>
-          <div class="form-block__inputs">
-            <label for="e-number" class="form__label">
-              e-Money Number
-              <input type="number" maxlength="9" class="form__input" id="e_number" name="e-number"
-                placeholder="238521993" autocomplete="off" required>
-            </label>
 
-            <label for="e-pin" class="form__label">
-              e-Money PIN
-              <input type="number" class="form__input" id="e_pin" name="e-pin" placeholder="6891" autocomplete="off"
-                required>
-            </label>
+          <p class="form__subtitle">shipping info</p>
+          <div class="form__block">
+            <div class="form-group__address">
+              <label for="address" class="form__label">Address</label>
+              <input class="form__input form__address" type="text" placeholder="1137 Williams Avenue" id="address"
+                name="address" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="zip_code" class="form__label">ZIP Code</label>
+              <input class="form__input" type="number" placeholder="10001" id="zip_code" name="zip_code"
+                autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="city" class="form__label">City</label>
+              <input class="form__input" type="text" placeholder="New York" id="city" name="city" autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="country" class="form__label">Country</label>
+              <input class="form__input" type="text" placeholder="United States" id="country" name="country"
+                autocomplete="off">
+            </div>
+          </div>
+
+          <p class="form__subtitle">Payment details</p>
+
+          <div class="form__block">
+
+            <div class="form-group__radio">
+              <label for="payment" class="form__label">Payment method
+              </label>
+              <div class="form-radio">
+                <input class="form-radio__input" type="radio" id="money_num" name="payment">
+                <label class="form-radio__label" for="money_num"><span class="radio-btn"></span>
+                  e-Money
+                </label>
+                <input class="form-radio__input" type="radio" id="card_pin" name="payment">
+                <label class="form-radio__label" for="card_pin"><span class="radio-btn"></span>
+                  Cash on Delivery
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="money_num" class="form__label">e-Money Number</label>
+              <input class="form__input" type="number" placeholder="238521993" id="money_num" name="money_num"
+                autocomplete="off">
+            </div>
+            <div class="form-group">
+              <label for="card_pin" class="form__label">e-Money PIN</label>
+              <input class="form__input" type="number" placeholder="6891" id="card_pin" name="card_pin"
+                autocomplete="off">
+            </div>
+          </div>
+        </div>
+        <div class="summary">
+          <div class="summary-body">
+            <div class="cart-top">
+              <h6 class="cart__heading">Summary</h6>
+            </div>
+            <div class="cart-product">
+              <img class="cart-product__img" src="./images/cart-img1.jpg" alt="product image">
+              <div class="cart-product__info">
+                <p class="text cart-product__name">XX99 MK II</p>
+                <p class="cart-product__price">$ 2,999</p>
+              </div>
+              <span class="cart-product__value summary-product__value">x1</span>
+            </div>
+            <div class="cart-product">
+              <img class="cart-product__img" src="./images/cart-img2.jpg" alt="product image">
+              <div class="cart-product__info">
+                <p class="text cart-product__name">XX59</p>
+                <p class="cart-product__price">$ 899</p>
+              </div>
+              <span class="cart-product__value summary-product__value">x1</span>
+            </div>
+            <div class="cart-product">
+              <img class="cart-product__img" src="./images/cart-img3.jpg" alt="product image">
+              <div class="cart-product__info">
+                <p class="text cart-product__name">YX1</p>
+                <p class="cart-product__price">$ 599</p>
+              </div>
+              <span class="cart-product__value summary-product__value">x2</span>
+            </div>
+            <div class="summary-bottom">
+              <p class="text summary-bottom__text">TOTAL</p>
+              <p class="cart-bottom__price">$ 5,396</p>
+            </div>
+            <div class="summary-bottom">
+              <p class="text summary-bottom__text">SHIPPING</p>
+              <p class="cart-bottom__price">$ 50</p>
+            </div>
+            <div class="summary-bottom">
+              <p class="text summary-bottom__text">VAT (INCLUDED)</p>
+              <p class="cart-bottom__price">$ 1,079</p>
+            </div>
+            <div class="summary-bottom summary-grand">
+              <p class="text summary-bottom__text">GRAND TOTAL</p>
+              <p class="summary-grand__price">$ 5,446</p>
+            </div>
+            <a href="#order_info" id="submitBtn" class="btn cart-btn">CONTINUE & PAY</a>
+          </div>
+          <div class="order-info" id="order_info">
+            <div class="order-info__popup popup">
+              <h3 class="tertiary-heading popup__heading">THANK YOU <br> FOR YOUR ORDER</h3>
+              <p class="popup__text">
+                You will receive an email confirmation shortly.
+              </p>
+              <div class="popup-info">
+                <div class="popup-product">
+                  <div class="popup-product__info">
+                    <img class="popup-product__img" src="./images/popup-img.png"
+                      srcset="./images/popup-img.png 1x, ./images/popup-img@2x.png 2x" width="50" height="50"
+                      alt="product image">
+                    <p class="popup-product__name">XX99 MK II <br> <span class="popup-product__price">$ 2,999</span></p>
+                    <span class="popup-product__value">x1</span>
+                  </div>
+                  <p class="popup-product__text">and 2 other item(s)</p>
+                </div>
+                <div class="popup-product__total">
+                  <p class="popup-product__total-title">Grand total</p>
+                  <p class="popup-product__total-price">$ 5,446</p>
+                </div>
+              </div>
+              <a href="#" class="btn popup__btn">back to home</a>
+            </div>
           </div>
         </div>
       </form>
-
-      <div class="summary">
-        <div class="cart-body">
-          <div class="cart-top">
-            <h6 class="cart__heading">Summary</h6>
-          </div>
-          <div class="cart-product">
-            <img class="cart-product__img" src="./images/cart-img1.jpg" alt="product image">
-            <div class="cart-product__info">
-              <p class="text cart-product__name">XX99 MK II</p>
-              <p class="cart-product__price">$ 2,999</p>
-            </div>
-            <span class="summary-num">x1</span>
-          </div>
-          <div class="cart-product">
-            <img class="cart-product__img" src="./images/cart-img2.jpg" alt="product image">
-            <div class="cart-product__info">
-              <p class="text cart-product__name">XX59</p>
-              <p class="cart-product__price">$ 899</p>
-            </div>
-            <span class="summary-num">x2</span>
-          </div>
-          <div class="cart-product">
-            <img class="cart-product__img" src="./images/cart-img3.jpg" alt="product image">
-            <div class="cart-product__info">
-              <p class="text cart-product__name">YX1</p>
-              <p class="cart-product__price">$ 599</p>
-            </div>
-            <span class="summary-num">x1</span>
-          </div>
-          <div class="cart-bottom">
-            <p class="text cart-bottom__text">TOTAL</p>
-            <p class="cart-bottom__price">$ 5,396</p>
-          </div>
-          <div class="cart-bottom">
-            <p class="text cart-bottom__text">SHIPPING</p>
-            <p class="cart-bottom__price">$ 50</p>
-          </div>
-          <div class="cart-bottom">
-            <p class="text cart-bottom__text">VAT (INCLUDED)</p>
-            <p class="cart-bottom__price">$ 1,079</p>
-          </div>
-          <div class="cart-bottom">
-            <p class="text cart-bottom__text">GRAND TOTAL</p>
-            <p class="cart-bottom__price">$ 5,446</p>
-          </div>
-          <a href="checkout.html" class="btn cart-btn">checkout</a>
-        </div>
-      </div>
-
-
-
     </div>
   </section>
 
